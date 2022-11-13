@@ -47,13 +47,13 @@ draft: false
   ~~~
   hugo server -D  
     -- 如果出现docs目录下不能生成静态网页文件时，试试：hugo -D 或者  hugo --cleanDestinationDir
-    --经试验发现hugo  server 只是在内存中渲染这些文件，通过自带的web服务器显示这些文件，要正式生成静态
-    --文件，需要单独使用hugo或者 hugo  -D  ,参数-D 是包含draft参数为真的文档也会生成静态文件。
-  http://localhost:1313 
-   --默认是这个端口，有时候要看server随机分配的端口
-   --在发布到github时，必须要设置编辑config.toml文件，设置baseURL数据项，比如：
-   -- baseURL = 'https://username.github.io/hugo''  
-   --如果不设置这个数据项的话，静态文件不能被正常渲染
+    --经试验发现hugo  server 只是在内存中渲染这些文件，通过自带的web服务器显示这些文件，并没有在指定的   --docs目录下生成静态网页文件。
+    --要正式生成静态网页文件，需要单独使用hugo或者 hugo  -D  ,参数-D 是包含draft参数为真的文档也会生成   --静态文件
+    http://localhost:1313 
+    --默认是这个端口，有时候要看server随机分配的端口
+    --在发布到github时，必须要设置编辑config.toml文件，设置baseURL数据项，比如：
+    --baseURL = 'https://username.github.io/hugo'  
+    --如果不设置这个数据项的话，静态文件不能被正常渲染
   ~~~
 ~~~
 经过自定义发布目录的设置，原来默认生成在public目录下的文件，现在会保存在docs目录下。推送到github项目仓库的main分支后，就可以使用https://username.github.io/hugo访问博客，这就是基于项目的pages使用方法。
