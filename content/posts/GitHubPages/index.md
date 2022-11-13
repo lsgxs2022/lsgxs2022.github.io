@@ -46,7 +46,6 @@ draft: false
 *  编译文档并在本地发布浏览
   ~~~
   hugo server -D  
-    -- 如果出现docs目录下不能生成静态网页文件时，试试：hugo -D 或者  hugo --cleanDestinationDir
     --经试验发现hugo  server 只是在内存中渲染这些文件，通过自带的web服务器显示这些文件，并没有在指定的   --docs目录下生成静态网页文件。
     --要正式生成静态网页文件，需要单独使用hugo或者 hugo  -D  ,参数-D 是包含draft参数为真的文档也会生成   --静态文件
     http://localhost:1313 
