@@ -94,14 +94,19 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/hugo/posts/%E6%B5%8B%E8%AF%95hugo%E6%B8%B2%E6%9F%93/" class="link black dim">
+      <a href="/hugo/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/" class="link black dim">
         测试hugo渲染
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       测试hugo静态文档发布后无法渲染的原因 baseURL的设置
+在自定义config.toml文件时，一定要设置baseURL值为自己的仓库域名，比如：baseURL = 'https://username.github.io/hugo'
 hugo -D
-具体是哪个原因，从这两个方面测试
+刚开始在本地使用hugo server -D ，在浏览器浏览本地静态网页文件时没有问题，但是后来发现这个命令并没有在public目录或者自定义的docs目录下生成静态网页文件。hugo server -D只是启动自带的这个web服务器，在内存中渲染这些文件，并没有真正生成静态网页文件。在编辑好MarkDown文档之后，要使用hugo 或者hugo -D在public目录或者自定义的的docs目录生成静态网页文件，然后再执行
+git add .
+git commit -m &quot;updates $(date)&quot;
+git push origin 也可以把下面这几条命令写在批处理文件中，写完文档后直接运行这个批处理就可以完成发布，稍等使用https://username.github.io/hugo浏览最新发布的博客文章。
+hugo git add . git commit -m &#34;updates $(date)&#34; git push origin 
     </div>
   </div>
 </div>

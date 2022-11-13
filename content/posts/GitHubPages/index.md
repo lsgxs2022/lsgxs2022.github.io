@@ -2,6 +2,7 @@
 title: "GitHubPages"
 date: 2022-11-12T16:43:00+08:00
 draft: false
+featured_image: "image/冰山.jpg"
 ---
 
 * 在github上建立一个项目类型的空白仓库（不要选择readme文件初始化仓库),仓库名称为hugo。
