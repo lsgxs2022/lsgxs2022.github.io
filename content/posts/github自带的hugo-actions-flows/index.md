@@ -9,4 +9,30 @@ featured_image: "image/冰山.jpg"
 
 很神奇，在username.github.io仓库的actions下采用了github推荐的hugo站点actions workflow，点击commit后在项目的根目录下新建了hugo.yml文件，新增博客文档后，git-add-commit-push 之后，显示deploy successful，使用https://username.github.io，居然可以正确的显示最新发布的文章，也就是说，什么也没有配置，直接可以发布成功，而且没有用到自己手动建立的gh-pages分支。
 
-我很好奇，怎么实现的呢？那么多参数，不太明白具体的作用，慢慢来，会懂得^-^。
+我很好奇，怎么实现的呢？那么多参数，不太明白具体的作用，慢慢来^-^。
+
+[Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
+
+~~~
+About publishing sources
+
+You can publish your site when changes are pushed to a specific branch, or you can write a GitHub Actions workflow to publish your site.
+
+If you do not need any control over the build process for your site, we recommend that you publish your site when changes are pushed to a specific branch. You can specify which branch and folder to use as your publishing source. The source branch can be any branch in your repository, and the source folder can either be the root of the repository (/) on the source branch or a /docs folder on the source branch. Whenever changes are pushed to the source branch, the changes in the source folder will be published to your GitHub Pages site.
+
+If you want to use a build process other than Jekyll or you do not want a dedicated branch to hold your compiled static files, we recommend that you write a GitHub Actions workflow to publish your site. GitHub provides starter workflows for common publishing scenarios to help you write your workflow.
+~~~
+
+[)
+
+~~~
+About publishing sources
+
+You can publish your site when changes are pushed to a specific branch, or you can write a GitHub Actions workflow to publish your site.
+
+If you do not need any control over the build process for your site, we recommend that you publish your site when changes are pushed to a specific branch. You can specify which branch and folder to use as your publishing source. The source branch can be any branch in your repository, and the source folder can either be the root of the repository (/) on the source branch or a /docs folder on the source branch. Whenever changes are pushed to the source branch, the changes in the source folder will be published to your GitHub Pages site.
+
+If you want to use a build process other than Jekyll or you do not want a dedicated branch to hold your compiled static files, we recommend that you write a GitHub Actions workflow to publish your site. GitHub provides starter workflows for common publishing scenarios to help you write your workflow.
+~~~
+
+看完Github Docs上关于为github  pages 站点配置发布源的解释就明白了，如果你不需要单独的分支来保存编译后的静态文件、或者你不想使用github后台的编译处理过程，推荐你自己编写GitHub Actions workflow来发布你的站点。读到这里，我就把自己手动建立的gh-pages删除了。剩下的就是慢慢研究这个github推荐的hugo.yml文件的实现细节了。当然，也可以使用单独的gh-pags分支，用仓库的secrets.deploy-token来自定义发布过程，也可以实现同样的效果。
