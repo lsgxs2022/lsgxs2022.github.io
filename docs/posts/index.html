@@ -94,6 +94,28 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/hugo/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/" class="link black dim">
+        Hugo自动化部署到github
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      使用github的actions flow把hugo博客自动化部署到github 部署静态博客站点到github一般有两种方法，第一种是手动建立项目，添加文档，最后使用git命令部署到github仓库。第二种方法是使用github提供的actions flow实现自动化部署，一般可以通过两个分支来实现。
+一个分支保存项目源文件、
+一般为main分支，把项目的源文件推送到这个分支，既可以保存源文件，又可以从这里开始执行自动化部署到本仓库的另外一个分支。
+手动建立一个独立的gh-pages分支
+git checkout --orphan gh-pagesecho &#34;hello gh-pages&#34; &gt; readme.mdgit add .git commit -m &#34;udpate with orphan branch gh-pages&#34;git push origin gh-pagesgit branch -a --经过上面的创建新的独立分支到最后的提交、推送，到这里才可以看到这个新建的分支-- 然后可以把gh-pages分支下除了.git目录之外的所有目录和文件删除，推送到远程，专门来保存自动部署生成的静态站点文件-- 当然可以试一下不必手动删除这些目录和文件，看看系统是不是会自动清理删除这些目录和文件。 编写actions自动部署脚本
+首先在项目的根目录下新建脚本文件：.github\workflows\hugo-actions.yml。如果提示不能新建.开头的目录，就从别的地方复制过来，编辑一下路径和文件名。 name: Deploy Hugo on:push:branches:- main jobs:build-deploy:runs-on: ubuntu-18.04steps:- uses: actions/checkout@v1- name: Setup Hugouses: peaceiris/actions-hugo@v2with:hugo-version: latest- name: Build run: hugo- name: Deployuses: peaceiris/actions-gh-pages@v3with:personal_token: ${{ secrets.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/hugo/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/" class="link black dim">
         测试hugo渲染
       </a>
@@ -295,32 +317,6 @@ hugo new posts/以文档的名字作为目录名称-不能包含空格/index.md 
     <h1 class="f3 near-black">
       <a href="/hugo/posts/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/" class="link black dim">
         在一台计算机上用git管理多个github账号
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      首先取消用户名和邮箱的全局设置
-git config --list查看一下全局配置参数列表，如果列表显示里包含自己设置的github登录用户名和邮箱，就使用下面两条命令取消全局配置参数：
-git config --global --unset user.name “your-name-for-github”
-git config --global --unset user.email &ldquo;your-mailbox-for-github&rdquo;
-使用ssh-keygen分别生成多个github账户对应的密钥对
-ssh-keygen -t ed25519 -f id_ed25519_hexo -C &quot;mailbox-for-github&quot;
-ssh-keygen -t ed25519 -f id_ed25519_hugo -C &quot;mailbox-for-github&quot;
-ssh-keygen -t ed25519 -f id_ed25519_tiddlywiki -C &quot;mailbox-for-github&quot;
-1、 把对应账号的公钥添加在github的settings-&gt;ssh2、启动ssh-agent添加私钥eval $(ssh-agent)ssh-add id_xxxxxx --后面的参数是对应的私钥文件名 在~/.ssh目录下新建config文件（没有扩展名的文本文件），内容如下：
-#firstHost hexoHostName github.comUser username_for_githbuIdentityFile ~/.ssh/id_xxxxxx#secondHost hugoHostName github.comUser username_for_githubIdentityFile ~/.ssh/id_ed25xxxxxx#ThirdHost tiddlywikiHostName github.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/hugo/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E6%88%B7/" class="link black dim">
-        如何在一台计算机上使用git管理多个github账户
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">

@@ -119,6 +119,42 @@
       
           
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          <a href="/hugo/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/" class="db grow">
+            <img src="/hugo/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/image/%E5%B1%B1%E5%B7%9D-2.jpg" class="img" alt="image from Hugo自动化部署到github">
+          </a>
+        </div>
+      
+      <div class="blah w-100 w-60-ns pl3-ns">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/hugo/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/" class="color-inherit dim link">
+            Hugo自动化部署到github
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          使用github的actions flow把hugo博客自动化部署到github 部署静态博客站点到github一般有两种方法，第一种是手动建立项目，添加文档，最后使用git命令部署到github仓库。第二种方法是使用github提供的actions flow实现自动化部署，一般可以通过两个分支来实现。
+一个分支保存项目源文件、
+一般为main分支，把项目的源文件推送到这个分支，既可以保存源文件，又可以从这里开始执行自动化部署到本仓库的另外一个分支。
+手动建立一个独立的gh-pages分支
+git checkout --orphan gh-pagesecho &#34;hello gh-pages&#34; &gt; readme.mdgit add .git commit -m &#34;udpate with orphan branch gh-pages&#34;git push origin gh-pagesgit branch -a --经过上面的创建新的独立分支到最后的提交、推送，到这里才可以看到这个新建的分支-- 然后可以把gh-pages分支下除了.git目录之外的所有目录和文件删除，推送到远程，专门来保存自动部署生成的静态站点文件-- 当然可以试一下不必手动删除这些目录和文件，看看系统是不是会自动清理删除这些目录和文件。 编写actions自动部署脚本
+首先在项目的根目录下新建脚本文件：.github\workflows\hugo-actions.yml。如果提示不能新建.开头的目录，就从别的地方复制过来，编辑一下路径和文件名。 name: Deploy Hugo on:push:branches:- main jobs:build-deploy:runs-on: ubuntu-18.04steps:- uses: actions/checkout@v1- name: Setup Hugouses: peaceiris/actions-hugo@v2with:hugo-version: latest- name: Build run: hugo- name: Deployuses: peaceiris/actions-gh-pages@v3with:personal_token: ${{ secrets.
+        </div>
+          <a href="/hugo/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+          
+        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
           <a href="/hugo/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/" class="db grow">
             <img src="/hugo/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/image/%E5%B1%B1%E5%B7%9D-2.jpg" class="img" alt="image from 测试hugo渲染">
           </a>
@@ -196,51 +232,18 @@ hugo git add . git commit -m &#34;updates $(date)&#34; git push origin
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/hugo/posts/%E4%BD%BF%E7%94%A8githubpages%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83/" class="color-inherit dim link">
-            使用GithubPages实现静态博客发布
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <ul>
-<li>
-<p>在github上建立一个项目类型的空白仓库（不要选择readme文件初始化仓库),仓库名称为hugo。</p>
-<ul>
-<li>本地的仓库时现成的.git仓库时，远程的github仓库最好是空仓，操作起来简单。</li>
-<li>如果远程是现成的.git仓库，就直接git clone到本地，然后再添加项目。</li>
-</ul>
-</li>
-<li>
-<p>设置main分支的docs作为静态网页发布目录</p>
-<p><img src="image/github-pages-docs.png" alt=""></p>
-</li>
-<li>
-<p>参照hugo官网的<a href="https://gohugo.io/getting-started/quick-start/">QuickStart</a>项目步骤，在本地建立hugo博客项目。</p>
-</li>
-</ul>
-        </div>
-          <a href="/hugo/posts/%E4%BD%BF%E7%94%A8githubpages%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/hugo/posts/%E4%BD%BF%E7%94%A8githubpages%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83/" class="link black dim">
+              使用GithubPages实现静态博客发布
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/hugo/posts/%E5%88%A0%E9%99%A4github%E5%88%86%E6%94%AF/" class="link black dim">
@@ -257,12 +260,6 @@ hugo git add . git commit -m &#34;updates $(date)&#34; git push origin
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/hugo/posts/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/" class="link black dim">
               Hugo文档的目录组织结构
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/hugo/posts/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/" class="link black dim">
-              快速安装和使用hugo
             </a>
           </h2>
         

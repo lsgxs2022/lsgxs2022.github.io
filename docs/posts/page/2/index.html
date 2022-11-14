@@ -94,6 +94,32 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/hugo/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E6%88%B7/" class="link black dim">
+        如何在一台计算机上使用git管理多个github账户
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      首先取消用户名和邮箱的全局设置
+git config --list查看一下全局配置参数列表，如果列表显示里包含自己设置的github登录用户名和邮箱，就使用下面两条命令取消全局配置参数：
+git config --global --unset user.name “your-name-for-github”
+git config --global --unset user.email &ldquo;your-mailbox-for-github&rdquo;
+使用ssh-keygen分别生成多个github账户对应的密钥对
+ssh-keygen -t ed25519 -f id_ed25519_hexo -C &quot;mailbox-for-github&quot;
+ssh-keygen -t ed25519 -f id_ed25519_hugo -C &quot;mailbox-for-github&quot;
+ssh-keygen -t ed25519 -f id_ed25519_tiddlywiki -C &quot;mailbox-for-github&quot;
+1、 把对应账号的公钥添加在github的settings-&gt;ssh2、启动ssh-agent添加私钥eval $(ssh-agent)ssh-add id_xxxxxx --后面的参数是对应的私钥文件名 在~/.ssh目录下新建config文件（没有扩展名的文本文件），内容如下：
+#firstHost hexoHostName github.comUser username_for_githbuIdentityFile ~/.ssh/id_xxxxxx#secondHost hugoHostName github.comUser username_for_githubIdentityFile ~/.ssh/id_ed25xxxxxx#ThirdHost tiddlywikiHostName github.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/hugo/posts/hugo%E7%AC%94%E8%AE%B0%E5%8F%91%E5%B8%83%E5%88%B0github/" class="link black dim">
         
       </a>
