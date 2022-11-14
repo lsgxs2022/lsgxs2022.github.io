@@ -6,7 +6,17 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Nov 2022 21:53:09 +0800</lastBuildDate><atom:link href="http://lsgxs.github.io/hugo/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Nov 2022 08:49:58 +0800</lastBuildDate><atom:link href="http://lsgxs.github.io/hugo/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在github部署静态博客站点的三种方式</title>
+      <link>http://lsgxs.github.io/hugo/posts/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Mon, 14 Nov 2022 08:49:58 +0800</pubDate>
+      
+      <guid>http://lsgxs.github.io/hugo/posts/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <description>最近使用hexo 和hugo两种静态站点框架在github上部署博客，总结一下有三种常用的部署方式：
+在两个不同的仓库之间使用githbu actions flow自动化部署站点 一个仓库作为博客项目源文件的存储空间 另外一个仓库作为博客项目生成的静态文件发布源 具体的实现可以参照自己hexo博客的部署项目源文件 在一个仓库的两个不同分支之间部署博客站点 首先要建立一个username.github.io的仓库，在main分支保存博客项目源文件。 其次是在本地建立一个独立分支gh-pages，用这个分支来发布生成的静态网页文件 利用github基于项目的github pages服务 在仓库的main分支保存博客项目源文件 在项目的根目录下建立docs目录，并修改config.toml文件，在文件末尾添加publish = &amp;ldquo;docs&amp;quot;的数据项。github项目仓库默认使用docs作为静态站点发布源，替代了public目录的作用，可以删除public目录。 也就是说在一个仓库的main分支下保存源文件，同时把项目根目录的docs目录作为静态站点发布源。 </description>
+    </item>
+    
     <item>
       <title>Hugo自动化部署到github</title>
       <link>http://lsgxs.github.io/hugo/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>

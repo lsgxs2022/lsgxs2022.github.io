@@ -70,4 +70,4 @@ featured_image: "image/山川-2.jpg"
   * 进入到hugo 项目仓库，然后选择secrets，新建仓库的secrets，填写名称，secret的内容是上一步新建的personal access token的内容，粘贴在这里保存即可，在action脚本里引用时，用${{ secrets.HUGODEPLOYBTTWOBRANCHS }}的写法就可以获取token的值。
   
     ![](image/repository-secret-new.png)
-
+也就是说，仓库的secrets读取的是github账号级别的personal access token。
