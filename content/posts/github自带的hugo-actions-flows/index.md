@@ -93,7 +93,7 @@ jobs:
 
 ![](image/GitHubPagesActions-gh-pages.png)
 
-
+也就是说这个gh-pages是由系统自己创建的。
 
 [About publishing sources](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
 
