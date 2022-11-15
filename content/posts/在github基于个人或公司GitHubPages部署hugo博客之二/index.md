@@ -8,7 +8,7 @@ draft: false
 
 用仓库的main分支保存博客项目源文件，用仓库的另外一个手动建立的独立分支gh-pages保存编译后的静态文件。这里依然以username.github.io形式的仓库为例。自己手动建立独立的gh-pages分支。
 
-* 在github上新建username.github.io形式的的空仓
+* 在github上新建username.github.io形式的空仓
 
 * 在本地根据hugo官网推荐的QuickStart入门教程，建立Hugo博客项目
 
@@ -46,7 +46,7 @@ draft: false
 
     ![](image/add-deploy-key.png)
 
-  * 打开你的博客源码仓库，Settings->Secrets->New repository secret，Name 填 ACTIONS_DEPLOY_KEY，Value 贴上 ssh 私钥。
+  * 选择Settings->Secrets->New repository secret，Name 填 HUGO_DEPLOY_KEY，Value 贴上 ssh 私钥。
 
     ![](image/New-Repository-Secrets.png)
 
