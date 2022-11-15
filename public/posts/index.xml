@@ -13,21 +13,12 @@
       <pubDate>Mon, 14 Nov 2022 22:47:45 +0800</pubDate>
       
       <guid>http://lsgxs.github.io/posts/github%E8%87%AA%E5%B8%A6%E7%9A%84hugo-actions-flows/</guid>
-      <description>测试github推荐的hugo actions worklows 很神奇，在username.github.io仓库的actions下采用了github推荐的hugo站点actions workflow，点击commit后在项目的根目录下新建了hugo.yml文件，新增博客文档后，git-add-commit-push 之后，显示deploy successful，使用https://username.github.io，居然可以正确的显示最新发布的文章，也就是说，什么也没有配置，直接可以发布成功，而且没有用到自己手动建立的gh-pages分支。
-我很好奇，怎么实现的呢？那么多参数，不太明白具体的作用，慢慢来^-^。
-github pages自带actions操作方法：进入该仓库，选择settings-pages,在Build and Deployment 的Source部分选择GitHub Actions，直接进入hugo.yml编辑界面，直接点击右侧的commit就可以在仓库新建hugo.yml文件，路径是.github\workflows\hugo.yml，什么有没有修改，内容如下。 hugo.yml
-# Sample workflow for building and deploying a Hugo site to GitHub Pagesname: Deploy Hugo site to Pageson:# Runs on pushes targeting the default branchpush:branches: [&amp;#34;main&amp;#34;]# Allows you to run this workflow manually from the Actions tabworkflow_dispatch:# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pagespermissions:contents: readpages: writeid-token: write# Allow one concurrent deploymentconcurrency:group: &amp;#34;pages&amp;#34;cancel-in-progress: true# Default to bashdefaults:run:shell: bashjobs:# Build jobbuild:runs-on: ubuntu-latestenv:HUGO_VERSION: 0.</description>
-    </item>
-    
-    <item>
-      <title>Hugo博客部署到github方式之二</title>
-      <link>http://lsgxs.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0github%E6%96%B9%E5%BC%8F%E4%B9%8B%E4%BA%8C/</link>
-      <pubDate>Mon, 14 Nov 2022 22:31:53 +0800</pubDate>
-      
-      <guid>http://lsgxs.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0github%E6%96%B9%E5%BC%8F%E4%B9%8B%E4%BA%8C/</guid>
-      <description>使用github actions自动部署博客站点 前一篇文章记录了手动模式推送hugo博客站点到github,采用的是基于项目的仓库，采用username/hugo.git的形式建立仓库，在项目根目录下建立docs目录，把静态博客站点发布在main分支的docs目录。
-这篇记录一下基于个人的仓库，采用的是username.github.io形式的仓库，并且建立一个orphan分支gh-pages，在main分支保存项目源文件，在gh-pages分支发布静态站点文件。主要是在项目根目录下建立自动部署脚本，这个文件的路径和名称如下：
-.github\workflows\hugo.yml
+      <description>测试github推荐的hugo actions worklows 前一篇文章记录了手动模式推送hugo博客站点到github,采用的是基于项目的仓库，采用username/hugo.git的形式建立仓库，在项目根目录下建立docs目录，把静态博客站点发布在main分支的docs目录。
+这篇记录一下基于个人的仓库，采用的是username.github.io形式的仓库。
+新建username.github.io的空仓
+根据hugo官网推荐的QuickStart入门教程，建立Hugo博客项目
+hugo new site hugocd hugo git initgit submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke编辑config.toml文件，在最后新增 theme = &amp;#34;ananke&amp;#34;修改baseURL = &amp;#34;https://username.github.io&amp;#34;hugo new posts/文档名称作为目录名/index.md --编辑自己的文档git add .git commit -m &amp;#34;新增文档&amp;#34;git push -u origin main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数 新建actions实现自动发布静态站点
+github pages自带actions操作方法：进入该仓库，选择settings-pages,在Build and Deployment 的Source部分选择GitHub Actions，直接进入hugo.yml编辑界面，直接点击右侧的commit就可以在仓库新建hugo.yml文件，路径是.github\workflows\hugo.yml，什么有没有修改，可以实现自动发布。 很神奇，在username.github.io仓库的actions下采用了github推荐的hugo站点actions workflow，点击commit后在项目的根目录下新建了hugo.yml文件，新增博客文档后，git-add-commit-push 之后，显示deploy successful，使用https://username.github.io，居然可以正确的显示最新发布的文章，也就是说，什么也没有配置，直接可以发布成功，而且没有用到自己手动建立的gh-pages分支。 我很好奇，怎么实现的呢？那么多参数，不太明白具体的作用，慢慢来^-^ hugo.yml
 # Sample workflow for building and deploying a Hugo site to GitHub Pagesname: Deploy Hugo site to Pageson:# Runs on pushes targeting the default branchpush:branches: [&amp;#34;main&amp;#34;]# Allows you to run this workflow manually from the Actions tabworkflow_dispatch:# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pagespermissions:contents: readpages: writeid-token: write# Allow one concurrent deploymentconcurrency:group: &amp;#34;pages&amp;#34;cancel-in-progress: true# Default to bashdefaults:run:shell: bashjobs:# Build jobbuild:runs-on: ubuntu-latestenv:HUGO_VERSION: 0.</description>
     </item>
     

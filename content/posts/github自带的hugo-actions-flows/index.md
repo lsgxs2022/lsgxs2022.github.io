@@ -7,13 +7,33 @@ featured_image: "image/冰山.jpg"
 
 #### 测试github推荐的hugo actions worklows
 
-很神奇，在username.github.io仓库的actions下采用了github推荐的hugo站点actions workflow，点击commit后在项目的根目录下新建了hugo.yml文件，新增博客文档后，git-add-commit-push 之后，显示deploy successful，使用https://username.github.io，居然可以正确的显示最新发布的文章，也就是说，什么也没有配置，直接可以发布成功，而且没有用到自己手动建立的gh-pages分支。
+前一篇文章记录了手动模式推送hugo博客站点到github,采用的是基于项目的仓库，采用username/hugo.git的形式建立仓库，在项目根目录下建立docs目录，把静态博客站点发布在main分支的docs目录。
 
-我很好奇，怎么实现的呢？那么多参数，不太明白具体的作用，慢慢来^-^。
+这篇记录一下基于个人的仓库，采用的是username.github.io形式的仓库。
 
-* github pages自带actions操作方法：进入该仓库，选择settings-pages,在Build and Deployment 的Source部分选择GitHub Actions，直接进入hugo.yml编辑界面，直接点击右侧的commit就可以在仓库新建hugo.yml文件，路径是.github\workflows\hugo.yml，什么有没有修改，内容如下。
+* 新建username.github.io的空仓
 
-hugo.yml
+* 根据hugo官网推荐的QuickStart入门教程，建立Hugo博客项目
+
+  ~~~·
+  hugo  new   site  hugo
+  cd hugo 
+  git  init
+  git  submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git  themes/ananke
+  编辑config.toml文件，在最后新增  theme  =  "ananke"
+  修改baseURL = "https://username.github.io"
+  hugo  new  posts/文档名称作为目录名/index.md    --编辑自己的文档
+  git  add .
+  git  commit -m   "新增文档"
+  git  push  -u origin  main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数
+  ~~~
+
+* 新建actions实现自动发布静态站点
+  *  github pages自带actions操作方法：进入该仓库，选择settings-pages,在Build and Deployment 的Source部分选择GitHub Actions，直接进入hugo.yml编辑界面，直接点击右侧的commit就可以在仓库新建hugo.yml文件，路径是.github\workflows\hugo.yml，什么有没有修改，可以实现自动发布。
+  *  很神奇，在username.github.io仓库的actions下采用了github推荐的hugo站点actions workflow，点击commit后在项目的根目录下新建了hugo.yml文件，新增博客文档后，git-add-commit-push 之后，显示deploy successful，使用https://username.github.io，居然可以正确的显示最新发布的文章，也就是说，什么也没有配置，直接可以发布成功，而且没有用到自己手动建立的gh-pages分支。
+
+    我很好奇，怎么实现的呢？那么多参数，不太明白具体的作用，慢慢来^-^
+  hugo.yml
 
 ~~~
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
@@ -87,7 +107,9 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
 
-~~~
+    ~~~
+
+
 点击仓库的actions显示All workflows，选择一个workflows,会在窗口的最下面显示一个artifact,终于看到了熟悉的gh-pages:
 ![](image/GitHubPagesActions-workflows.png)
 
@@ -97,7 +119,7 @@ jobs:
 
 [About publishing sources](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
 
-~~~
+    ~~~
 About publishing sources
 
 You can publish your site when changes are pushed to a specific branch, or you can write a GitHub Actions workflow to publish your site.
