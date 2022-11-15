@@ -1,10 +1,10 @@
 ---
-title: "GitHubPages"
+title: "在github基于项目GitHub Pages部署hugo博客"
 date: 2022-11-12T16:43:00+08:00
 draft: false
 featured_image: "image/冰山.jpg"
 ---
-
+前面有两篇笔记专门记录基于个人或者公司GitHub Pages发布hugo博客站点的方法。这篇笔记记录如何在基于项目的GitHub Pages部署博客站点。
 * 在github上建立一个项目类型的空白仓库（不要选择readme文件初始化仓库),仓库名称为hugo。
 
   * 本地的仓库时现成的.git仓库时，远程的github仓库最好是空仓，操作起来简单。
