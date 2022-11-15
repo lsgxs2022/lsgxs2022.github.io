@@ -1,5 +1,5 @@
 ---
-title: "在github基于个人或公司GitHubPages部署hugo博客之一"
+title: "在github基于个人或公司GitHub Pages部署hugo博客之一"
 date: 2022-11-14T22:47:45+08:00
 draft: false
 featured_image: "image/冰山.jpg"
