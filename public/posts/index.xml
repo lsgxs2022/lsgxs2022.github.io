@@ -15,7 +15,7 @@
       <guid>http://lsgxs.github.io/posts/github%E8%87%AA%E5%B8%A6%E7%9A%84hugo-actions-flows/</guid>
       <description>测试github推荐的hugo actions worklows 很神奇，在username.github.io仓库的actions下采用了github推荐的hugo站点actions workflow，点击commit后在项目的根目录下新建了hugo.yml文件，新增博客文档后，git-add-commit-push 之后，显示deploy successful，使用https://username.github.io，居然可以正确的显示最新发布的文章，也就是说，什么也没有配置，直接可以发布成功，而且没有用到自己手动建立的gh-pages分支。
 我很好奇，怎么实现的呢？那么多参数，不太明白具体的作用，慢慢来^-^。
-hugo.yml
+github pages自带actions操作方法：进入该仓库，选择settings-pages,在Build and Deployment 的Source部分选择GitHub Actions，直接进入hugo.yml编辑界面，直接点击右侧的commit就可以在仓库新建hugo.yml文件，路径是.github\workflows\hugo.yml，什么有没有修改，内容如下。 hugo.yml
 # Sample workflow for building and deploying a Hugo site to GitHub Pagesname: Deploy Hugo site to Pageson:# Runs on pushes targeting the default branchpush:branches: [&amp;#34;main&amp;#34;]# Allows you to run this workflow manually from the Actions tabworkflow_dispatch:# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pagespermissions:contents: readpages: writeid-token: write# Allow one concurrent deploymentconcurrency:group: &amp;#34;pages&amp;#34;cancel-in-progress: true# Default to bashdefaults:run:shell: bashjobs:# Build jobbuild:runs-on: ubuntu-latestenv:HUGO_VERSION: 0.</description>
     </item>
     

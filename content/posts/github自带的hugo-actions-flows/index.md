@@ -11,6 +11,8 @@ featured_image: "image/冰山.jpg"
 
 我很好奇，怎么实现的呢？那么多参数，不太明白具体的作用，慢慢来^-^。
 
+* github pages自带actions操作方法：进入该仓库，选择settings-pages,在Build and Deployment 的Source部分选择GitHub Actions，直接进入hugo.yml编辑界面，直接点击右侧的commit就可以在仓库新建hugo.yml文件，路径是.github\workflows\hugo.yml，什么有没有修改，内容如下。
+
 hugo.yml
 
 ~~~
@@ -86,8 +88,10 @@ jobs:
         uses: actions/deploy-pages@v1
 
 ~~~
+点击仓库的actions显示All workflows，选择一个workflows,会在窗口的最下面显示一个artifact,终于看到了熟悉的gh-pages:
+![](image/GitHubPagesActions-workflows.png)
 
-
+![](image/GitHubPagesActions-gh-pages.png)
 
 
 
