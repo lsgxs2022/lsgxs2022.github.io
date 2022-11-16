@@ -7,9 +7,9 @@ featured_image: "image/冰山.jpg"
 
 #### 使用自定义的actons workflow,在仓库的两个分支之间实现hugo博客站点自动化部署
 
-##### **使用github personal access 和仓库的secrets在两个分支之间实现博看站点自动化部署**
+##### **使用github personal access token 和仓库的secrets在两个分支之间实现博客站点自动化部署**
 
-用仓库的main分支保存博客项目源文件，用仓库的另外一个手动建立的独立分支gh-pages保存编译后的静态文件。这里依然以username.github.io形式的仓库为例。自己手动建立独立的gh-pages分支。
+用仓库的main分支保存博客项目源文件，手动建立独立分支gh-pages保存编译后的静态文件。这里依然以username.github.io形式的仓库为例。自己手动建立独立的gh-pages分支。
 
 * 在github上新建username.github.io形式的空仓
 
@@ -89,10 +89,10 @@ featured_image: "image/冰山.jpg"
           uses: peaceiris/actions-gh-pages@v3
           if: github.ref == 'refs/heads/main'
           with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
+            github_token: ${{ secrets.GITHUB_TOKEN }} 
             publish_dir: ./public
   ~~~
-  from hugo:https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-pages-setting
+  [GitHub pages setting](https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-pages-setting)
 
   ~~~
   GitHub pages setting
