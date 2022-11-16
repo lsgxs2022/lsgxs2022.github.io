@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My New Hugo Site</title>
-    <link>http://lsgxs2022.github.io/posts/</link>
+    <link>http://lsgxs2022.github.io/gh-pages/posts/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Nov 2022 20:02:48 +0800</lastBuildDate><atom:link href="http://lsgxs2022.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Nov 2022 20:02:48 +0800</lastBuildDate><atom:link href="http://lsgxs2022.github.io/gh-pages/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在github基于个人或公司GitHub Pages部署hugo博客之二</title>
-      <link>http://lsgxs2022.github.io/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</link>
       <pubDate>Tue, 15 Nov 2022 20:02:48 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</guid>
       <description>使用自定义的actons workflow,在仓库的两个分支之间实现hugo博客站点自动化部署 用仓库的main分支保存博客项目源文件，用仓库的另外一个手动建立的独立分支gh-pages保存编译后的静态文件。这里依然以username.github.io形式的仓库为例。自己手动建立独立的gh-pages分支。
 在github上新建username.github.io形式的空仓
 在本地根据hugo官网推荐的QuickStart入门教程，建立Hugo博客项目
@@ -22,10 +22,10 @@ git checkout --orphan gh-pages echo &amp;#34;hello github gh-pages&amp;#34; &amp
     
     <item>
       <title>在github基于个人或公司GitHub Pages部署hugo博客之一</title>
-      <link>http://lsgxs2022.github.io/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</link>
       <pubDate>Mon, 14 Nov 2022 22:47:45 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</guid>
       <description>使用github推荐的hugo actions workflow自动化部署hugo博客站点 前一篇文章记录了手动模式推送hugo博客站点到github,采用的是基于项目的仓库，采用username/hugo.git的形式建立仓库，在项目根目录下建立docs目录，把静态博客站点发布在main分支的docs目录。
 这篇记录一下基于个人的仓库，采用的是username.github.io形式的仓库。
 新建username.github.io的空仓
@@ -37,20 +37,20 @@ github pages自带actions操作方法：进入该仓库，选择settings-pages,�
     
     <item>
       <title>在github部署静态博客站点的三种方式</title>
-      <link>http://lsgxs2022.github.io/posts/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
       <pubDate>Mon, 14 Nov 2022 08:49:58 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
       <description>最近使用hexo 和hugo两种静态站点框架在github上部署博客，总结一下有三种常用的部署方式：
 在两个不同的仓库之间使用githbu actions flow自动化部署站点 一个仓库作为博客项目源文件的存储空间 另外一个仓库作为博客项目生成的静态文件发布源 具体的实现可以参照自己hexo博客的部署项目源文件 在一个仓库的两个不同分支之间部署博客站点 首先要建立一个username.github.io的仓库，在main分支保存博客项目源文件。 其次是在本地建立一个独立分支gh-pages，用这个分支来发布生成的静态网页文件 利用github基于项目的github pages服务 在仓库的main分支保存博客项目源文件 在项目的根目录下建立docs目录，并修改config.toml文件，在文件末尾添加publish = &amp;ldquo;docs&amp;quot;的数据项。github项目仓库默认使用docs作为静态站点发布源，替代了public目录的作用，可以删除public目录。 也就是说在一个仓库的main分支下保存源文件，同时把项目根目录的docs目录作为静态站点发布源。 </description>
     </item>
     
     <item>
       <title>Hugo自动化部署到github</title>
-      <link>http://lsgxs2022.github.io/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
       <pubDate>Sun, 13 Nov 2022 21:53:09 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
       <description>使用github的actions flow把hugo博客自动化部署到github 部署静态博客站点到github一般有两种方法，第一种是手动建立项目，添加文档，最后使用git命令部署到github仓库。第二种方法是使用github提供的actions flow实现自动化部署，一般可以通过两个分支来实现。
 一个分支保存项目源文件、
 一般为main分支，把项目的源文件推送到这个分支，既可以保存源文件，又可以从这里开始执行自动化部署到本仓库的另外一个分支。
@@ -61,10 +61,10 @@ git checkout --orphan gh-pages echo &amp;#34;hello gh-pages&amp;#34; &amp;gt; re
     
     <item>
       <title>测试hugo渲染</title>
-      <link>http://lsgxs2022.github.io/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sun, 13 Nov 2022 08:31:38 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/</guid>
       <description>测试hugo静态文档发布后无法渲染的原因 baseURL的设置
 在自定义config.toml文件时，一定要设置baseURL值为自己的仓库域名，比如：baseURL = &#39;https://username.github.io/hugo&#39;
 hugo -D
@@ -77,10 +77,10 @@ hugo git add . git commit -m &amp;#34;updates $(date)&amp;#34; git push origin <
     
     <item>
       <title>在github基于项目GitHub Pages部署hugo博客</title>
-      <link>http://lsgxs2022.github.io/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 12 Nov 2022 16:43:00 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;p&gt;前面有两篇笔记专门记录基于个人或者公司GitHub Pages发布hugo博客站点的方法。这篇笔记记录如何在基于项目的GitHub Pages部署博客站点。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -103,10 +103,10 @@ hugo git add . git commit -m &amp;#34;updates $(date)&amp;#34; git push origin <
     
     <item>
       <title>删除github分支</title>
-      <link>http://lsgxs2022.github.io/posts/%E5%88%A0%E9%99%A4github%E5%88%86%E6%94%AF/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/%E5%88%A0%E9%99%A4github%E5%88%86%E6%94%AF/</link>
       <pubDate>Thu, 10 Nov 2022 15:18:16 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/%E5%88%A0%E9%99%A4github%E5%88%86%E6%94%AF/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/%E5%88%A0%E9%99%A4github%E5%88%86%E6%94%AF/</guid>
       <description>删除github仓库的分支 删除远程分支
 git push origin --delete branch-name
 也可以登录github账户，在branches下浏览所有分支，删除指定分支
@@ -116,10 +116,10 @@ git branch -d branch-name</description>
     
     <item>
       <title>Hugo Quickstart</title>
-      <link>http://lsgxs2022.github.io/posts/hugo-quickstart/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/hugo-quickstart/</link>
       <pubDate>Tue, 08 Nov 2022 22:19:18 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/hugo-quickstart/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/hugo-quickstart/</guid>
       <description>Quick Start Create a Hugo site using the beautiful Ananke theme.
 This quick start uses macOS in the examples. For instructions about how to install Hugo on other operating systems, see install.
 It is required to have Git installed to run this tutorial.
@@ -129,20 +129,20 @@ Step 1: Install Hugo Install the extended version of Hugo (this is required for 
     
     <item>
       <title>Hugo文档的目录组织结构</title>
-      <link>http://lsgxs2022.github.io/posts/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/</link>
       <pubDate>Wed, 02 Nov 2022 20:42:17 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/</guid>
       <description>hugo文档的目录组织结构 在posts目录下直接保存markdow文档 在posts目录下以文档名新建目录，在这新建的目录下新家index.md，新建一个image目录来保存文章引用的图片资源。 因为index.md和image是同一个层级的结构，无论是在front matter区域的featured_image，还是正文区域的图片，都可以直接引用这个同级目录下保存的资源文件。 如下图所示：
 也就是以目录的形式来组织文档，不仅层次分明，而且引用的图片也可以得到正确渲染。</description>
     </item>
     
     <item>
       <title>快速安装和使用hugo</title>
-      <link>http://lsgxs2022.github.io/posts/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/</link>
       <pubDate>Tue, 01 Nov 2022 22:32:10 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/</guid>
       <description>安装hugo hugo一个快速的博客生成器，只需要下载一个二进制的可执行文件即可。下载后可以保持下面的目录结构：
 c:/hugo/bin &amp;ndash;把这个目录的路径添加在Windows的系统path里。 c:/hugo/sites 新建一个hugo 站点
 cd sites
@@ -160,10 +160,10 @@ hugo new posts/以文档的名字作为目录名称-不能包含空格/index.md 
     
     <item>
       <title>Hugo Post中的图像资源引用方法</title>
-      <link>http://lsgxs2022.github.io/posts/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</link>
       <pubDate>Tue, 01 Nov 2022 22:04:29 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
       <description>在hugo的post中如何引用图片 第一个引用图片的位置是在文章的front matter区域，一般使用featured_image: &amp;quot;images/xxx.png&amp;quot;
 这个图片默认显示在文章的左边，相当于一个缩略图，装饰作用。
 在这个位置显示的图片，如果在static目录下建立images目录保存引用的图片的话，发布到github的username.github.io时，却因为无法找到文件而不能渲染。以文章名字新建目录，然后在这个目录下修改markdown文档的名字为index.md，在同级别的目录下新建一个image目录，用来保存在front matte区域显示的缩略图图片。目录结构如下
@@ -173,10 +173,10 @@ hugo new posts/以文档的名字作为目录名称-不能包含空格/index.md 
     
     <item>
       <title>在一台计算机上用git管理多个github账号</title>
-      <link>http://lsgxs2022.github.io/posts/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</link>
       <pubDate>Tue, 01 Nov 2022 22:03:27 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</guid>
       <description>首先取消用户名和邮箱的全局设置
 git config --list查看一下全局配置参数列表，如果列表显示里包含自己设置的github登录用户名和邮箱，就使用下面两条命令取消全局配置参数：
 git config --global --unset user.name “your-name-for-github”
@@ -191,10 +191,10 @@ ssh-keygen -t ed25519 -f id_ed25519_tiddlywiki -C &amp;quot;mailbox-for-github&a
     
     <item>
       <title>如何在一台计算机上使用git管理多个github账户</title>
-      <link>http://lsgxs2022.github.io/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E6%88%B7/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E6%88%B7/</link>
       <pubDate>Sun, 30 Oct 2022 16:24:26 +0800</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E6%88%B7/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E6%88%B7/</guid>
       <description>首先取消用户名和邮箱的全局设置
 git config --list查看一下全局配置参数列表，如果列表显示里包含自己设置的github登录用户名和邮箱，就使用下面两条命令取消全局配置参数：
 git config --global --unset user.name “your-name-for-github”
@@ -209,10 +209,10 @@ ssh-keygen -t ed25519 -f id_ed25519_tiddlywiki -C &amp;quot;mailbox-for-github&a
     
     <item>
       <title></title>
-      <link>http://lsgxs2022.github.io/posts/hugo%E7%AC%94%E8%AE%B0%E5%8F%91%E5%B8%83%E5%88%B0github/</link>
+      <link>http://lsgxs2022.github.io/gh-pages/posts/hugo%E7%AC%94%E8%AE%B0%E5%8F%91%E5%B8%83%E5%88%B0github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://lsgxs2022.github.io/posts/hugo%E7%AC%94%E8%AE%B0%E5%8F%91%E5%B8%83%E5%88%B0github/</guid>
+      <guid>http://lsgxs2022.github.io/gh-pages/posts/hugo%E7%AC%94%E8%AE%B0%E5%8F%91%E5%B8%83%E5%88%B0github/</guid>
       <description>hugo 笔记 从github克隆一个仓库 在本地仅仅执行hugo new site quickstart ，不用git init ，利用github克隆下来的仓库git版本控制 把生成的hugo 项目源文件增加到刚下载的仓库，覆盖提示的文件复制 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke 在config.toml文件最后增加:theme = &amp;ldquo;ananke&amp;rdquo; 添加hugo文档 hugo server -D http://localhost:1313 </description>
     </item>
     
